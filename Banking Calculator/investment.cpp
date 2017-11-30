@@ -41,7 +41,7 @@ void Investment::DisplaySimpleInt(){
 }
 void Investment::DisplayCompoundedInt(){
     CalcCompoundedInt();
-    cout << "After: " << GetTime() << " Month(s) your new Balance is: " << GetCompoundedInterest() << endl;
+    cout << "After: " << GetTime() << " Years(s) your new Balance is: " << GetCompoundedInterest() << endl;
 }
 
 double Investment::GetSimpleIntrest(){
