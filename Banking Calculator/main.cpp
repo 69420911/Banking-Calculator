@@ -3,6 +3,13 @@
 #include "investment.h"
 using namespace std;
 
+void printmenu();
+
+int main() {
+    cout << "Welcome to our Interest Calculator!" << endl;
+    printmenu();
+}
+
 void printmenu() {
     Investment invest;
     double input;
@@ -58,8 +65,4 @@ void printmenu() {
                 break;
         }
     }
-}
-int main() {
-    cout << "Welcome to our Interest Calculator!" << endl;
-    printmenu();
 }
