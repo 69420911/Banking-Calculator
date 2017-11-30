@@ -32,7 +32,6 @@ void Investment::CalcCompoundedInt(){
     int n = GetSetTimesToCompound();
     int t = GetTime();
     CompoundInterest = p*pow((1+r/100),(t*n));
-    cout << CompoundInterest << " DEBUG" << endl;
 }
 
 void Investment::DisplaySimpleInt(){
