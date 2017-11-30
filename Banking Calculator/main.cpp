@@ -1,8 +1,11 @@
 #include <iostream>
 #include <ostream>
+#include "investment.h"
 using namespace std;
 
 void printmenu(){
+    Investment invest;
+    double input;
     char menu = ' ';
     while (menu != 'q') {
         menu = ' ';
@@ -18,7 +21,10 @@ void printmenu(){
         
         switch (menu) {
             case 'a':
-                cout << "a" << endl;
+                cout << "Please Inter the Initial Ammount you wish to deposit into a bank account" << endl;
+                cin >> input;
+                invest.SetAmount(input);
+                cout << "
                 break;
             case 'b':
                 cout << "b" << endl;

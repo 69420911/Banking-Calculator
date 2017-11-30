@@ -5,21 +5,25 @@ using namespace std;
 
 class Investment{
 	public:
-		Investment();
-		Investment(int timeM, double initAmount, double interestRate, int numberComp);
-		double GetSimpleIntEQ() const;
-		double GetCompoundedIntEQ() const;
-		void SetTime(int );			//monthly
-		void SetAmount(double );
-		int GetTime() const;
-		double GetAmount()const;
-		void SetInterestRate(double );
-		double GetInterestRate() const;
-		void SetNumComp (int);
-		int GetNumComp() const;
+		void SetTime(int);
+		void SetAmount(double);
+        void SetInterestRate(double);
+        void SetNumComp (int);
+        void SetSimpleInteret();
+        void SetCompoundedInterest();
+        void CalcSimpleInt();
+        void CalcCompoundedInt();
+        void DisplaySimpleInt();
+        void DisplayCompoundedInt();
+		int GetTime();
+		double GetAmount();
+		double GetInterestRate();
+		int GetNumComp();
 	private:
 		int timeMonthly;
 		double initialAmount;
 		double intRate;
+        double SimpleIntrest;
+        double CompoundIntrest;
 		int numComp;
 };
