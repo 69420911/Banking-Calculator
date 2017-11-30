@@ -21,13 +21,33 @@ void printmenu(){
         
         switch (menu) {
             case 'a':
-                cout << "Please Inter the Initial Ammount you wish to deposit into a bank account" << endl;
+                cout << "Please Enter the Initial Ammount you wish to deposit into a bank account?" << endl;
                 cin >> input;
                 invest.SetAmount(input);
-                cout << "
+                cout << "What is the interest rate?" << endl;
+                cin >> input;
+                invest.SetInterestRate(input);
+                cout << "How many months would you like to invest for?" << endl;
+                cin >> input;
+                invest.SetTime(input);
+                invest.DisplaySimpleInt();
+                
                 break;
             case 'b':
-                cout << "b" << endl;
+                cout << "Please Enter the Initial Ammount you wish to deposit into a bank account?" << endl;
+                cin >> input;
+                invest.SetAmount(input);
+                cout << "What interest rate?" << endl;
+                cin >> input;
+                invest.SetInterestRate(input);
+                cout << "How many times within a year would you like to have your intrest compounded?" << endl;
+                cin >> input;
+                invest.SetInterestRate(input);
+                cout << "How many years would you like to invest?" << endl;
+                cin >> input;
+                invest.SetTime(input);
+                invest.DisplayCompoundedInt();
+                
                 break;
             case 'c':
                 cout << "c" << endl;
