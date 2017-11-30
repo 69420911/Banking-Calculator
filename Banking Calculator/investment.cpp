@@ -23,7 +23,7 @@ void Investment::CalcSimpleInt(){
 	double p = GetAmount();
 	double r = GetInterestRate();
 	int t = GetTime();
-	SimpleInterest = (p * (1.0 + (r * t)));
+	SimpleInterest = p + (p*r*t)/100;
 }
 
 void Investment::CalcCompoundedInt(){

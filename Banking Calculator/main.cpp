@@ -52,7 +52,9 @@ void printmenu() {
             case 'c':
                 double temp = invest.GetSimpleIntrest();
                 double temp2 = invest.GetCompoundedInterest();
+                cout << endl;
                 cout << "Simple Interest: "  << temp <<  "$ Compounded Interest: " << temp2 << "$" << endl;
+                cout << endl;
                 break;
         }
     }
