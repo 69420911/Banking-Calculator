@@ -3,7 +3,7 @@
 #include "investment.h"
 using namespace std;
 
-void printmenu(){
+void printmenu() {
     Investment invest;
     double input;
     char menu = ' ';
@@ -11,10 +11,11 @@ void printmenu(){
         menu = ' ';
         cout << "a - Simple Interest Invesment Account" << endl;
         cout << "b - Compounded Interest Invesment Account" << endl;
-        cout << "c - Show differance between the two" << endl;
+        cout << "c - Show Both" << endl;
         cout << "q - Quit" << endl;
         
         while (menu != 'a' && menu != 'b' && menu != 'c' && menu != 'q') {
+            menu = ' ';
             cout << "Please choose an option:" << endl;
             cin >> menu;
         }
@@ -39,7 +40,7 @@ void printmenu(){
                 cout << "What interest rate?" << endl;
                 cin >> input;
                 invest.SetInterestRate(input);
-                cout << "How many times within a year would you like to have your intrest compounded?" << endl;
+                cout << "How many times within a year would you like to have your interest compounded?" << endl;
                 cin >> input;
                 invest.SetTimesToCompound(input);
                 cout << "How many years would you like to invest?" << endl;
@@ -49,7 +50,9 @@ void printmenu(){
                 
                 break;
             case 'c':
-                cout << "c" << endl;
+                double temp = invest.GetSimpleIntrest();
+                double temp2 = invest.GetCompoundedInterest();
+                cout << "Simple Interest: "  << temp <<  "$ Compounded Interest: " << temp2 << "$" << endl;
                 break;
         }
     }
