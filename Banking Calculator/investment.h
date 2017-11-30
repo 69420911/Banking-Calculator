@@ -7,8 +7,8 @@ public:
     void SetTime(int);
     void SetAmount(double);
     void SetInterestRate(double);
-    void SetNumComp (int);
     void SetSimpleInteret();
+    void SetTimesToCompound(int);
     void SetCompoundedInterest();
     void CalcSimpleInt();
     void CalcCompoundedInt();
@@ -20,14 +20,14 @@ public:
     double GetSimpleIntrest();
     double GetCompoundedInterest();
     
-    int GetNumComp();
+    int GetSetTimesToCompound();
     int GetTime();
 private:
     double initialAmount;
     double intRate;
     double SimpleInterest;
-    double CompoundInterest;
-    int numComp;
+    long double CompoundInterest;
+    int timestocompound;
     int timeMonthly;
     
 };

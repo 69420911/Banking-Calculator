@@ -11,12 +11,12 @@ void Investment::SetAmount(double p){
 	initialAmount = p;
 }
 
-void Investment::SetNumComp(int n){
-	numComp = n;
-}
-
 void Investment::SetInterestRate(double r){
 	intRate = r;
+}
+
+void Investment::SetTimesToCompound(int a){
+    timestocompound = a;
 }
 
 void Investment::CalcSimpleInt(){
@@ -29,9 +29,10 @@ void Investment::CalcSimpleInt(){
 void Investment::CalcCompoundedInt(){
 	int p = GetAmount();
 	double r = GetInterestRate();
-	int n = GetNumComp();
-	int t = GetTime();
-	CompoundInterest = (p * (pow((1.0 + (r / n)),(n * t))));
+    int n = GetSetTimesToCompound();
+    int t = GetTime();
+    CompoundInterest = p*pow((1+r/100),(t*n));
+    cout << CompoundInterest << " DEBUG" << endl;
 }
 
 void Investment::DisplaySimpleInt(){
@@ -52,6 +53,9 @@ double Investment::GetCompoundedInterest(){
     return CompoundInterest;
 }
 
+int Investment::GetSetTimesToCompound(){
+    return timestocompound;
+}
 double Investment::GetInterestRate() {
     return intRate;
 }
@@ -60,11 +64,6 @@ double Investment::GetAmount(){
     return initialAmount;
 }
 
-
 int Investment::GetTime(){
     return timeMonthly;
-}
-
-int Investment::GetNumComp() {
-    return numComp;
 }

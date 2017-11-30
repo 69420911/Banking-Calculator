@@ -31,7 +31,6 @@ void printmenu(){
                 cin >> input;
                 invest.SetTime(input);
                 invest.DisplaySimpleInt();
-                
                 break;
             case 'b':
                 cout << "Please Enter the Initial Ammount you wish to deposit into a bank account?" << endl;
@@ -42,7 +41,7 @@ void printmenu(){
                 invest.SetInterestRate(input);
                 cout << "How many times within a year would you like to have your intrest compounded?" << endl;
                 cin >> input;
-                invest.SetInterestRate(input);
+                invest.SetTimesToCompound(input);
                 cout << "How many years would you like to invest?" << endl;
                 cin >> input;
                 invest.SetTime(input);
