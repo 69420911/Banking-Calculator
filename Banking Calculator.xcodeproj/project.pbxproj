@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A4389071FCFEDCD00223C15 /* investment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A4389051FCFEDCD00223C15 /* investment.cpp */; };
 		9A8F53E21FBE1D3500B91504 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F53E11FBE1D3500B91504 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A4389051FCFEDCD00223C15 /* investment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = investment.cpp; sourceTree = "<group>"; };
+		9A4389061FCFEDCD00223C15 /* investment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = investment.h; sourceTree = "<group>"; };
 		9A8F53DE1FBE1D3500B91504 /* Banking Calculator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Banking Calculator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8F53E11FBE1D3500B91504 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +60,8 @@
 		9A8F53E01FBE1D3500B91504 /* Banking Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				9A4389051FCFEDCD00223C15 /* investment.cpp */,
+				9A4389061FCFEDCD00223C15 /* investment.h */,
 				9A8F53E11FBE1D3500B91504 /* main.cpp */,
 			);
 			path = "Banking Calculator";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4389071FCFEDCD00223C15 /* investment.cpp in Sources */,
 				9A8F53E21FBE1D3500B91504 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

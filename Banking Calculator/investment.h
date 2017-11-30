@@ -2,24 +2,32 @@
 
 using namespace std;
 
-
-class Investment{
-	public:
-		Investment();
-		Investment(int timeM, double initAmount, double interestRate, int numberComp);
-		double GetSimpleIntEQ() const;
-		double GetCompoundedIntEQ() const;
-		void SetTime(int );			//monthly
-		void SetAmount(double );
-		int GetTime() const;
-		double GetAmount()const;
-		void SetInterestRate(double );
-		double GetInterestRate() const;
-		void SetNumComp (int);
-		int GetNumComp() const;
-	private:
-		int timeMonthly;
-		double initialAmount;
-		double intRate;
-		int numComp;
+class Investment {
+public:
+    void SetTime(int);
+    void SetAmount(double);
+    void SetInterestRate(double);
+    void SetSimpleInteret();
+    void SetTimesToCompound(int);
+    void SetCompoundedInterest();
+    void CalcSimpleInt();
+    void CalcCompoundedInt();
+    void DisplaySimpleInt();
+    void DisplayCompoundedInt();
+    
+    double GetAmount();
+    double GetInterestRate();
+    double GetSimpleIntrest();
+    double GetCompoundedInterest();
+    
+    int GetSetTimesToCompound();
+    int GetTime();
+private:
+    double initialAmount;
+    double intRate;
+    double SimpleInterest;
+    long double CompoundInterest;
+    int timestocompound;
+    int timeMonthly;
+    
 };

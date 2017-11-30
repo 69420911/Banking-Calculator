@@ -3,48 +3,67 @@
 #include "investment.h"
 using namespace std;
 
-Investment::Investment(){
-	int timeMonthly = 0;
-	double initalAmount = 0.0;
-	double intRate = 0.0;
-	int numComp = 0;
-	return;
-}
 void Investment::SetTime(int t){
 	timeMonthly = t;
 }
-int Investment::GetTime()const{
-	return timeMonthly;
-}
+
 void Investment::SetAmount(double p){
 	initialAmount = p;
 }
-double Investment::GetAmount()const {
-	return initialAmount;
-}
-void Investment::SetNumComp(int n){
-	numComp = n;
-}
-int Investment::GetNumComp() const{
-	return numComp;
-}
+
 void Investment::SetInterestRate(double r){
 	intRate = r;
 }
-double Investment::GetInterestRate() const{
-	return intRate;
+
+void Investment::SetTimesToCompound(int a){
+    timestocompound = a;
 }
-double Investment::GetSimpleIntEQ() const{
+
+void Investment::CalcSimpleInt(){
 	double p = GetAmount();
 	double r = GetInterestRate();
 	int t = GetTime();
-	return (p * (1.0 + (r * t)));
+	SimpleInterest = (p * (1.0 + (r * t)));
 }
-double Investment::GetCompoundedIntEQ() const{
+
+void Investment::CalcCompoundedInt(){
 	int p = GetAmount();
 	double r = GetInterestRate();
-	int n = GetNumComp();
-	int t = GetTime();
-	
-	return (p * (pow(1.0 + (r / n)),(n * t)));
+    int n = GetSetTimesToCompound();
+    int t = GetTime();
+    CompoundInterest = p*pow((1+r/100),(t*n));
+    cout << CompoundInterest << " DEBUG" << endl;
+}
+
+void Investment::DisplaySimpleInt(){
+    CalcSimpleInt();
+    cout << "After: " << GetTime() << " Month(s) your new Balance is: " << GetSimpleIntrest() << endl;
+    
+}
+void Investment::DisplayCompoundedInt(){
+    CalcCompoundedInt();
+    cout << "After: " << GetTime() << " Years(s) your new Balance is: " << GetCompoundedInterest() << endl;
+}
+
+double Investment::GetSimpleIntrest(){
+    return SimpleInterest;
+}
+
+double Investment::GetCompoundedInterest(){
+    return CompoundInterest;
+}
+
+int Investment::GetSetTimesToCompound(){
+    return timestocompound;
+}
+double Investment::GetInterestRate() {
+    return intRate;
+}
+
+double Investment::GetAmount(){
+    return initialAmount;
+}
+
+int Investment::GetTime(){
+    return timeMonthly;
 }
